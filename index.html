@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>金子同学漫画-金子同学漫画在线阅读_校园日常漫画_金子同学漫画作品与更新</title>
+<meta name="description" content="金子同学漫画主题首页，整理金子同学漫画的校园日常故事、章节阅读入口、角色介绍与更新提示，方便读者了解金子同学漫画的内容与阅读方式。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f4b942'/%3E%3Ccircle cx='24' cy='26' r='7' fill='%232b2b2b'/%3E%3Ccircle cx='44' cy='26' r='7' fill='%232b2b2b'/%3E%3Cpath d='M20 42c6 8 18 8 24 0' stroke='%232b2b2b' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#2b2b2b;
+    --ink-soft:#5a5750;
+    --paper:#fdfaf3;
+    --paper-2:#f6f0e2;
+    --line:#e2d9c5;
+    --accent:#f4b942;
+    --accent-deep:#d99a1f;
+    --green:#4f7a5c;
+    --radius:16px;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.75;
+    font-size:16px;
+  }
+  a{color:inherit;text-decoration:none;}
+  img,svg{display:block;max-width:100%;}
+  .wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 20px;}
+
+  /* 页头 */
+  header.site{
+    position:sticky;top:0;z-index:20;
+    background:rgba(253,250,243,.94);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .head-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:16px;padding:12px 0;flex-wrap:wrap;
+  }
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;letter-spacing:.5px;}
+  .brand .mark{width:38px;height:38px;flex:0 0 38px;}
+  nav.main{display:flex;gap:6px;flex-wrap:wrap;font-size:14.5px;}
+  nav.main a{
+    padding:6px 12px;border-radius:999px;color:var(--ink-soft);
+    transition:background .2s,color .2s;
+  }
+  nav.main a:hover,nav.main a:focus-visible{background:var(--paper-2);color:var(--ink);}
+  nav.main a.cta{background:var(--ink);color:#fff;}
+  nav.main a.cta:hover{background:#000;color:#fff;}
+
+  /* 首屏 */
+  .hero{padding:44px 0 34px;border-bottom:1px dashed var(--line);}
+  .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:36px;align-items:center;}
+  .kicker{
+    display:inline-block;font-size:12.5px;letter-spacing:1.5px;
+    background:var(--accent);color:#3a2d05;font-weight:700;
+    padding:3px 12px;border-radius:999px;margin-bottom:16px;
+  }
+  h1{
+    font-size:clamp(28px,4.6vw,44px);
+    line-height:1.22;margin:0 0 14px;font-weight:800;letter-spacing:.5px;
+  }
+  .hero p.lead{
+    margin:0 0 22px;color:var(--ink-soft);font-size:16.5px;max-width:38em;
+  }
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:11px 22px;border-radius:999px;font-weight:700;font-size:15px;
+    border:1.5px solid transparent;transition:transform .15s,background .2s,color .2s;
+  }
+  .btn:active{transform:translateY(1px);}
+  .btn.primary{background:var(--ink);color:#fff;}
+  .btn.primary:hover{background:#000;}
+  .btn.ghost{border-color:var(--line);color:var(--ink);background:#fff;}
+  .btn.ghost:hover{border-color:var(--accent-deep);background:var(--paper-2);}
+  .btn[aria-disabled="true"]{opacity:.55;pointer-events:none;cursor:default;}
+  .hero-stats{display:flex;gap:26px;flex-wrap:wrap;font-size:13.5px;color:var(--ink-soft);}
+  .hero-stats b{display:block;font-size:20px;color:var(--ink);line-height:1.3;}
+
+  .hero-art{
+    background:var(--paper-2);
+    border:1px solid var(--line);
+    border-radius:24px;padding:18px;
+    position:relative;overflow:hidden;
+  }
+  .hero-art::after{
+    content:"";position:absolute;inset:auto -30px -40px auto;
+    width:120px;height:120px;border-radius:50%;
+    background:rgba(244,185,66,.35);
+  }
+  .hero-art figcaption{
+    font-size:12.5px;color:var(--ink-soft);text-align:center;margin-top:8px;
+  }
+
+  /* 通用分区 */
+  section{padding:46px 0;}
+  section + section{border-top:1px dashed var(--line);}
+  .sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:24px;}
+  h2{font-size:clamp(21px,2.6vw,27px);margin:0;font-weight:800;letter-spacing:.4px;}
+  .sec-head p{margin:0;color:var(--ink-soft);font-size:14.5px;max-width:42em;}
+  h3{font-size:17.5px;margin:0 0 8px;font-weight:700;}
+  p{margin:0 0 12px;}
+  .muted{color:var(--ink-soft);}
+
+  /* 章节列表 */
+  .chapters{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .chap{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:18px 18px 16px;display:flex;flex-direction:column;gap:6px;
+    transition:border-color .2s,box-shadow .2s,transform .2s;
+  }
+  .chap:hover{border-color:var(--accent-deep);box-shadow:0 6px 18px rgba(43,43,43,.07);transform:translateY(-2px);}
+  .chap .no{font-size:12.5px;font-weight:700;color:var(--accent-deep);letter-spacing:1px;}
+  .chap h3{margin:0;font-size:16.5px;}
+  .chap p{margin:0;font-size:13.8px;color:var(--ink-soft);}
+  .chap .meta{margin-top:auto;padding-top:10px;font-size:12.5px;color:var(--ink-soft);display:flex;justify-content:space-between;gap:8px;}
+
+  /* 角色卡片 */
+  .roles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .role{
+    background:var(--paper-2);border-radius:var(--radius);padding:20px;
+    border:1px solid transparent;
+  }
+  .role .avatar{
+    width:64px;height:64px;border-radius:50%;
+    background:#fff;border:2px solid var(--line);
+    display:flex;align-items:center;justify-content:center;margin-bottom:12px;
+  }
+  .role p{font-size:14.2px;color:var(--ink-soft);margin:0;}
+  .role .tag{
+    display:inline-block;font-size:12px;background:#fff;border:1px solid var(--line);
+    border-radius:999px;padding:1px 10px;margin-bottom:10px;color:var(--ink-soft);
+  }
+
+  /* 阅读指南 */
+  .guide{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:start;}
+  .steps{list-style:none;margin:0;padding:0;counter-reset:s;}
+  .steps li{
+    position:relative;padding:0 0 18px 44px;counter-increment:s;
+  }
+  .steps li::before{
+    content:counter(s);
+    position:absolute;left:0;top:0;
+    width:28px;height:28px;border-radius:50%;
+    background:var(--accent);color:#3a2d05;font-weight:800;font-size:14px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .steps li:last-child{padding-bottom:0;}
+  .steps b{display:block;margin-bottom:2px;}
+  .steps span{font-size:14.3px;color:var(--ink-soft);}
+  .note{
+    background:#fff;border:1px solid var(--line);border-left:4px solid var(--green);
+    border-radius:12px;padding:18px 20px;
+  }
+  .note h3{color:var(--green);}
+  .note p{font-size:14.3px;color:var(--ink-soft);margin:0 0 10px;}
+  .note p:last-child{margin-bottom:0;}
+
+  /* 下载 */
+  .download{
+    background:var(--ink);color:#f4efe2;border-radius:24px;padding:34px 32px;
+    display:grid;grid-template-columns:1.3fr .7fr;gap:28px;align-items:center;
+  }
+  .download h2{color:#fff;}
+  .download p{color:#cfc8b8;font-size:14.6px;margin:0 0 10px;}
+  .download .btn[aria-disabled="true"]{
+    background:var(--accent);color:#3a2d05;opacity:.85;
+  }
+  .download .dl-art{opacity:.9;}
+
+  /* 页尾 */
+  footer.site{
+    border-top:1px solid var(--line);background:var(--paper-2);
+    padding:34px 0 28px;font-size:13.8px;color:var(--ink-soft);
+  }
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:26px;}
+  .foot-grid h4{font-size:14px;margin:0 0 10px;color:var(--ink);font-weight:700;}
+  .foot-grid ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;}
+  .foot-grid a:hover{color:var(--ink);text-decoration:underline;}
+  .foot-brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--ink);margin-bottom:10px;}
+  .foot-brand .mark{width:30px;height:30px;flex:0 0 30px;}
+  .copyright{margin-top:26px;padding-top:16px;border-top:1px solid var(--line);font-size:12.8px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+
+  @media (max-width:860px){
+    .hero-grid{grid-template-columns:1fr;gap:26px;}
+    .hero-art{order:-1;}
+    .chapters{grid-template-columns:1fr 1fr;}
+    .roles{grid-template-columns:1fr;}
+    .guide{grid-template-columns:1fr;gap:24px;}
+    .download{grid-template-columns:1fr;padding:26px 22px;}
+    .download .dl-art{display:none;}
+    .foot-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:560px){
+    body{font-size:15.5px;}
+    .chapters{grid-template-columns:1fr;}
+    .head-inner{gap:8px;}
+    nav.main{font-size:13.5px;gap:2px;}
+    nav.main a{padding:5px 9px;}
+    section{padding:34px 0;}
+    .hero{padding:30px 0 26px;}
+    .hero-stats{gap:18px;}
+    .foot-grid{grid-template-columns:1fr;}
+  }
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap head-inner">
+    <a class="brand" href="#top" aria-label="金子同学漫画 首页">
+      <svg class="mark" viewBox="0 0 64 64" role="img" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#f4b942"/>
+        <circle cx="24" cy="26" r="6.5" fill="#2b2b2b"/>
+        <circle cx="44" cy="26" r="6.5" fill="#2b2b2b"/>
+        <path d="M20 42c6 8 18 8 24 0" stroke="#2b2b2b" stroke-width="4" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span>金子同学漫画</span>
+    </a>
+    <nav class="main" aria-label="主导航">
+      <a href="#chapters">章节阅读</a>
+      <a href="#roles">角色档案</a>
+      <a href="#guide">阅读指南</a>
+      <a href="#download">下载专题</a>
+      <a class="cta" href="#chapters">开始阅读</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="kicker">校园日常 · 条漫连载</span>
+        <h1 id="hero-title">金子同学漫画</h1>
+        <p class="lead">金子同学漫画围绕一位普通却总把事情想得很认真的同学展开，用短小的单章记录教室、走廊和放学路上的日常片段。本页把金子同学漫画的章节入口、角色关系与阅读方式集中整理，方便第一次接触的读者按顺序读下去。</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#chapters">从第一章开始</a>
+          <a class="btn ghost" href="#guide">了解阅读方式</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>3 位</b>主要角色</div>
+          <div><b>6 章</b>已整理章节</div>
+          <div><b>单章</b>独立成篇</div>
+        </div>
+      </div>
+      <figure class="hero-art" style="margin:0">
+        <svg viewBox="0 0 320 240" role="img" aria-label="金子同学漫画场景插画：课桌与窗外走廊">
+          <rect width="320" height="240" rx="18" fill="#fdfaf3"/>
+          <rect x="24" y="26" width="150" height="96" rx="8" fill="#e8f0e9" stroke="#c9d8cc"/>
+          <path d="M24 70h150M74 26v96" stroke="#c9d8cc" stroke-width="2"/>
+          <rect x="196" y="26" width="100" height="60" rx="8" fill="#fff" stroke="#e2d9c5"/>
+          <path d="M206 46h80M206 60h56" stroke="#e2d9c5" stroke-width="4" stroke-linecap="round"/>
+          <rect x="40" y="146" width="240" height="14" rx="7" fill="#d99a1f" opacity=".45"/>
+          <rect x="56" y="160" width="12" height="52" rx="4" fill="#c9bda2"/>
+          <rect x="252" y="160" width="12" height="52" rx="4" fill="#c9bda2"/>
+          <circle cx="112" cy="128" r="16" fill="#f4b942"/>
+          <circle cx="106" cy="125" r="2.6" fill="#2b2b2b"/>
+          <circle cx="118" cy="125" r="2.6" fill="#2b2b2b"/>
+          <path d="M105 134c4 4 10 4 14 0" stroke="#2b2b2b" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+          <rect x="160" y="112" width="82" height="34" rx="6" fill="#fff" stroke="#e2d9c5"/>
+          <path d="M172 124h58M172 134h38" stroke="#e2d9c5" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <figcaption>金子同学漫画中的教室场景示意</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 章节 -->
+  <section id="chapters" aria-labelledby="chapters-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 id="chapters-title">章节阅读入口</h2>
+          <p>每一章都是独立的日常片段，按顺序阅读可以看清人物关系的推进；跳读也不影响理解单章内容。</p>
+        </div>
+      </div>
+      <div class="chapters">
+        <a class="chap" href="#chapters">
+          <span class="no">第 01 章</span>
+          <h3>转来的座位</h3>
+          <p>金子同学被安排到靠窗的位置，与同桌第一次交换了姓名。</p>
+          <span class="meta"><span>日常 · 开场</span><span>约 12 格</span></span>
+        </a>
+        <a class="chap" href="#chapters">
+          <span class="no">第 02 章</span>
+          <h3>值日表上的名字</h3>
+          <p>一张排班表引发的小误会，让金子同学第一次被全班记住。</p>
+          <span class="meta"><span>校园 · 群像</span><span>约 14 格</span></span>
+        </a>
+        <a class="chap" href="#chapters">
+          <span class="no">第 03 章</span>
+          <h3>午休的十分钟</h3>
+          <p>走廊尽头的短暂交谈，交代了金子同学不擅长拒绝的性格。</p>
+          <span class="meta"><span>日常 · 人物</span><span>约 10 格</span></span>
+        </a>
+        <a class="chap" href="#chapters">
+          <span class="no">第 04 章</span>
+          <h3>借出去的那支笔</h3>
+          <p>小道具串起前后两章，金子同学漫画的细节线索在此收束。</p>
+          <span class="meta"><span>日常 · 线索</span><span>约 11 格</span></span>
+        </a>
+        <a class="chap" href="#chapters">
+          <span class="no">第 05 章</span>
+          <h3>放学后的黑板</h3>
+          <p>值日留下的板书，成为金子同学漫画里少见的安静段落。</p>
+          <span class="meta"><span>校园 · 情绪</span><span>约 13 格</span></span>
+        </a>
+        <a class="chap" href="#chapters">
+          <span class="no">第 06 章</span>
+          <h3>下一次排座位</h3>
+          <p>章节回到起点，给前五章的关系一次温和的回应。</p>
+          <span class="meta"><span>日常 · 收束</span><span>约 15 格</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 角色 -->
+  <section id="roles" aria-labelledby="roles-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 id="roles-title">角色档案</h2>
+          <p>金子同学漫画的人物不多，关系清晰，先认识三个人就足够读懂大部分情节。</p>
+        </div>
+      </div>
+      <div class="roles">
+        <article class="role">
+          <div class="avatar" aria-hidden="true">
+            <svg width="40" height="40" viewBox="0 0 40 40">
+              <circle cx="20" cy="20" r="20" fill="#f4b942"/>
+              <circle cx="15" cy="18" r="2.4" fill="#2b2b2b"/>
+              <circle cx="25" cy="18" r="2.4" fill="#2b2b2b"/>
+              <path d="M14 26c3.5 3 8.5 3 12 0" stroke="#2b2b2b" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span class="tag">主角</span>
+          <h3>金子同学</h3>
+          <p>做事认真、反应稍慢半拍，遇到问题习惯先自己想办法。金子同学漫画的大部分视角都由此展开。</p>
+        </article>
+        <article class="role">
+          <div class="avatar" aria-hidden="true">
+            <svg width="40" height="40" viewBox="0 0 40 40">
+              <circle cx="20" cy="20" r="20" fill="#4f7a5c"/>
+              <circle cx="15" cy="18" r="2.4" fill="#fff"/>
+              <circle cx="25" cy="18" r="2.4" fill="#fff"/>
+              <path d="M15 26h10" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span class="tag">同桌</span>
+          <h3>同桌</h3>
+          <p>说话直接、行动力强，负责把金子同学从犹豫里拉出来，也常制造需要收场的场面。</p>
+        </article>
+        <article class="role">
+          <div class="avatar" aria-hidden="true">
+            <svg width="40" height="40" viewBox="0 0 40 40">
+              <circle cx="20" cy="20" r="20" fill="#d99a1f"/>
+              <circle cx="15" cy="18" r="2.4" fill="#2b2b2b"/>
+              <circle cx="25" cy="18" r="2.4" fill="#2b2b2b"/>
+              <path d="M16 27c2.5 1.5 5.5 1.5 8 0" stroke="#2b2b2b" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span class="tag">同学</span>
+          <h3>班上的同学</h3>
+          <p>群像角色，按章节轮流出场，承担值日、借东西、排座位等具体情节的推动。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 阅读指南 -->
+  <section id="guide" aria-labelledby="guide-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 id="guide-title">怎么读金子同学漫画</h2>
+          <p>从哪一章开始、要不要按顺序看、每章大概多久，这里给出一份简洁的阅读路径。</p>
+        </div>
+      </div>
+      <div class="guide">
+        <ol class="steps">
+          <li><b>先看第 01 章</b><span>开场交代座位与人物，是理解后续情节最省力的入口。</span></li>
+          <li><b>按章节顺序推进</b><span>金子同学漫画的单章独立，但借出去的笔、值日表等线索跨章延续，顺序阅读能接住这些呼应。</span></li>
+          <li><b>每章控制在一两分钟内</b><span>单章格数不多，适合课间或通勤时读一段。</span></li>
+          <li><b>读完回到角色档案</b><span>人物关系理清后，再看群像章节会更容易分辨谁在说话。</span></li>
+        </ol>
+        <aside class="note">
+          <h3>阅读提示</h3>
+          <p>金子同学漫画以校园日常为主，没有强冲突剧情，适合想找轻松短篇的读者。</p>
+          <p>章节目前以文字目录形式展示，点开对应条目即可进入该章阅读位置。</p>
+          <p>如果只想看某一个主题，可以先读「午休的十分钟」与「借出去的那支笔」两章，它们最能代表整体节奏。</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 下载 -->
+  <section id="download" aria-labelledby="download-title">
+    <div class="wrap">
+      <div class="download">
+        <div>
+          <h2 id="download-title">下载金子同学漫画专题页</h2>
+          <p>把章节目录、角色档案与阅读指南打包保存，离线时也能翻看这份金子同学漫画的资料整理。</p>
+          <p>下载入口正在整理中，正式文件上线后会替换为可直接保存的地址。</p>
+          <a class="btn" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+        </div>
+        <div class="dl-art" aria-hidden="true">
+          <svg viewBox="0 0 180 140">
+            <rect x="10" y="14" width="160" height="112" rx="14" fill="#3a3a3a"/>
+            <rect x="26" y="30" width="128" height="72" rx="8" fill="#fdfaf3"/>
+            <path d="M44 48h92M44 62h64M44 76h80" stroke="#e2d9c5" stroke-width="5" stroke-linecap="round"/>
+            <path d="M90 104v18m0 0-10-10m10 10 10-10" stroke="#f4b942" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg class="mark" viewBox="0 0 64 64" role="img" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#f4b942"/>
+            <circle cx="24" cy="26" r="6.5" fill="#2b2b2b"/>
+            <circle cx="44" cy="26" r="6.5" fill="#2b2b2b"/>
+            <path d="M20 42c6 8 18 8 24 0" stroke="#2b2b2b" stroke-width="4" fill="none" stroke-linecap="round"/>
+          </svg>
+          <span>金子同学漫画</span>
+        </div>
+        <p style="margin:0;max-width:30em;">金子同学漫画主题首页，集中呈现章节目录、角色档案与阅读路径，帮助读者快速进入这个校园日常故事。</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#chapters">章节阅读入口</a></li>
+          <li><a href="#roles">角色档案</a></li>
+          <li><a href="#guide">阅读指南</a></li>
+          <li><a href="#download">下载专题页</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于本站</h4>
+        <ul>
+          <li><a href="#top">返回顶部</a></li>
+          <li><a href="#guide">阅读提示</a></li>
+          <li><a href="#roles">人物关系说明</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© 金子同学漫画 · 校园日常条漫主题页</span>
+      <span>内容以章节目录与角色介绍为主，持续整理中</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
